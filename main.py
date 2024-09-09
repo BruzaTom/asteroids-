@@ -37,7 +37,7 @@ def main():
             for shot in shotsGroup:
                 if shot.collisions(item):
                     shot.kill()
-                    item.kill()
+                    item.split()
             if item.collisions(ship):
                 print('Game over!')
                 return
