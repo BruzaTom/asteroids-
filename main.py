@@ -30,6 +30,10 @@ def main():
             item.update(dt)
         for item in drawableGroup:
             item.draw(screen)
+        for item in asteroidsGroup:
+            if item.collisions(ship):
+                print('Game over!')
+                return
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
